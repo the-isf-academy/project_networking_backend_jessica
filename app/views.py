@@ -12,6 +12,7 @@ def all_palette(args):
         palette_list.append(palette.json_response())
 
     return {'palette':palette_list}
+ 
 
 @route_post(BASE_URL + 'new', args={'hex1':int,'hex2':int,'hex3':int,'hex4':int})
 def new_palette(args):
@@ -25,6 +26,6 @@ def new_palette(args):
         #archive = False
     )
 
-    new_fortune.save()
+    new_palette.save()
 
-    return {'fortune': new_fortune.json_response()}
+    return {'palette': new_palette.json_response()}
