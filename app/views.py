@@ -35,4 +35,4 @@ def palette_likes(args):
         palette_likes = Palette.objects.get(id=args['id'])
         palette_likes.increase_likes()
 
-    return {'likes': likes.json_response}
+    return {'likes': palette_likes.json_response()}

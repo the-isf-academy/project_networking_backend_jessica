@@ -7,7 +7,7 @@ class Palette(Model):
     hex2 = StringField()
     hex3 = StringField()
     hex4 = StringField()
-    tone = StringField()
+#    tone = StringField()
     likes = IntegerField()
 #    archive = BooleanField()
 
@@ -19,10 +19,10 @@ class Palette(Model):
             'hex2': self.hex2,
             'hex3': self.hex3,
             'hex4': self.hex4,
-            #'likes': self.likes,
-            'tone': self.tone
+            'likes': self.likes,
+            #'tone': self.tone
         }
 
-def increase_likes(self):
-    self.likes =+ 1
-    self.save()
+    def increase_likes(self):
+        self.likes =+ 1
+        self.save()
