@@ -3,12 +3,12 @@
 from banjo.models import Model, StringField, IntegerField, FloatField, BooleanField
 
 class Palette(Model):
-    hex1 = IntegerField()
-    hex2 = IntegerField()
-    hex3 = IntegerField()
-    hex4 = IntegerField()
-#    tone = StringField()
-#    likes = IntegerField()
+    hex1 = StringField()
+    hex2 = StringField()
+    hex3 = StringField()
+    hex4 = StringField()
+    tone = StringField()
+    likes = IntegerField()
 #    archive = BooleanField()
 
     def json_response(self):
@@ -20,5 +20,9 @@ class Palette(Model):
             'hex3': self.hex3,
             'hex4': self.hex4,
             #'likes': self.likes,
-            #'tone': self.tone
+            'tone': self.tone
         }
+
+def increase_likes(self):
+    self.likes =+ 1
+    self.save()

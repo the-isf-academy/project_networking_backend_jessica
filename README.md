@@ -6,7 +6,7 @@
 > If you're interested in how to format markdown, click [here](https://www.markdownguide.org/basic-syntax/#images-1)
 
 ## API Overview
-*Replace this with an overview of your API.*
+My API  is  a color palette generator
 
 ### Model
 
