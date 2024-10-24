@@ -9,6 +9,7 @@ class Palette(Model):
     hex4 = StringField()
 #    tone = StringField()
     likes = IntegerField()
+    keyword = StringField()
 #    archive = BooleanField()
 
     def json_response(self):
@@ -26,3 +27,12 @@ class Palette(Model):
     def increase_likes(self):
         self.likes =+ 1
         self.save()
+
+    def change_palette(self,hex1,hex2,hex3,hex4):
+        self.hex1 = hex1
+        self.hex2 = hex2
+        self.hex3 = hex3
+        self.hex4 = hex4
+        self.likes = 0
+        self.save
+        
