@@ -25,7 +25,7 @@ class Palette(Model):
         }
 
     def increase_likes(self):
-        self.likes =+ 1
+        self.likes += 1
         self.save()
 
     def change_palette(self,hex1,hex2,hex3,hex4):
@@ -34,5 +34,5 @@ class Palette(Model):
         self.hex3 = hex3
         self.hex4 = hex4
         self.likes = 0
-        self.save
+        self.save()
         

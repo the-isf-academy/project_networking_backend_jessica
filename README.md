@@ -42,7 +42,7 @@ Search up palette through keywords
 | new        | post        | hex1,hex2,hex3,hex4    |
 | likes      | post        | id                     |
 | edit       | post        | id,hex1,hex2,hex3,hex4 |
-| search     | post        | keyword                |
+
 
 ## Setup
 

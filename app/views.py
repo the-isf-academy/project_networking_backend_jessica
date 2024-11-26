@@ -51,7 +51,7 @@ def palette_likes(args):
 @route_post(BASE_URL + 'edit', args={'id':int,'hex1':str,'hex2':str,'hex3':str,'hex4':str})
 def change_palette(args):
     if Palette.objects.filter(id=args['id']).exists():
-        palette_change= Palette.objects.get(id=args['id'])
+        palette_change = Palette.objects.get(id=args['id'])
         palette_change.change_palette(args['hex1'], args['hex2'], args['hex3'], args['hex4'])
 
         return {'edit': palette_change.json_response()}
